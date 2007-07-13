@@ -1098,6 +1098,21 @@ factors, such as re-cabling a monitor, etc.
 	just at the time when a display manager or log in script might
 	be changing the monitor size or configuration.
 
+8.2 Events added in version 1.3 of the RandR extension
+
+┌───
+    RROutputDPMSChangeNotify:
+	window: WINDOW			window requesting notification
+	output: OUTPUT			output affected by change
+	level: CARD16
+└───
+
+	This event is generated whenever the DPMS state of an output has 
+	changed and is sent to requsting clients. 'root' is the root of the
+	screen the change occurred on, 'window' is window selecting for this
+	event. The level is one of the DPMS level constants defined by the
+	DPMS extension.
+
                               ❧❧❧❧❧❧❧❧❧❧❧
 
 9. Extension Versioning

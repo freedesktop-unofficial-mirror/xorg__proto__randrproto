@@ -626,6 +626,21 @@ typedef struct {
 } xRROutputPropertyNotifyEvent;
 #define sz_xRROutputPropertyNotifyEvent	32
 
+typedef struct {
+    CARD8 type;				/* always evBase + RRNotify */
+    CARD8 subCode;			/* RRNotify_OutputDPMSChange */
+    CARD16 sequenceNumber B16;
+    Window window B32;			/* window requesting notification */
+    RROutput output B32;		/* affected output */
+    CARD16 level;			/* new DPMS level of output */
+    CARD16 pad1 B32;
+    CARD32 pad2 B32;
+    CARD32 pad3 B32;
+    CARD32 pad4 B32;
+    CARD32 pad5 B32;
+} xRROutputDPMSChangeNotifyEvent;
+#define sz_xRROutputDPMSChangeNotifyEvent	32
+
 #undef RRModeFlags
 #undef RRCrtc
 #undef RRMode

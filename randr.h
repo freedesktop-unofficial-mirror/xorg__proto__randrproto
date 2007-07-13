@@ -39,7 +39,7 @@ typedef unsigned long	XRandrModeFlags;
 
 #define RANDR_NAME		"RANDR"
 #define RANDR_MAJOR		1
-#define RANDR_MINOR		2
+#define RANDR_MINOR		3
 
 #define RRNumberErrors		3
 #define RRNumberEvents		2
@@ -83,6 +83,8 @@ typedef unsigned long	XRandrModeFlags;
 #define RRCrtcChangeNotifyMask	    (1L << 1)
 #define RROutputChangeNotifyMask    (1L << 2)
 #define RROutputPropertyNotifyMask  (1L << 3)
+/* V1.3 additions */
+#define RROutputDPMSChangeNotifyMask (1L << 4)
 
 /* Event codes */
 #define RRScreenChangeNotify	0
@@ -92,6 +94,8 @@ typedef unsigned long	XRandrModeFlags;
 #define  RRNotify_CrtcChange	    0
 #define  RRNotify_OutputChange	    1
 #define  RRNotify_OutputProperty    2
+/* V1.3 additions */
+#define  RRNotify_OutputDPMSChange  3
 
 /* used in the rotation field; rotation and reflection in 0.1 proto. */
 #define RR_Rotate_0		1
