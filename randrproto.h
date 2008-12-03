@@ -631,6 +631,32 @@ typedef struct {
 
 #define sz_xRRGetCrtcTransformReply	96
 
+typedef struct {
+    CARD8	reqType;
+    CARD8	randrReqType;
+    CARD16	length B16;
+    Window	window B32;
+    RROutput	output B32;
+} xRRSetOutputPrimaryReq;
+#define sz_xRRSetOutputPrimaryReq	12
+
+typedef struct {
+    CARD8	reqType;
+    CARD8	randrReqType;
+    CARD16	length B16;
+    Window	window B32;
+} xRRGetOutputPrimaryReq;
+#define sz_xRRGetOutputPrimaryReq	8
+
+typedef struct {
+    BYTE	type;
+    CARD8	pad;
+    CARD16	sequenceNumber B16;
+    CARD32	length B32;
+    RROutput	output B32;
+} xRRGetOutputPrimaryReply;
+#define sz_xRRGetOutputPrimaryReply	12
+
 /*
  * event
  */
