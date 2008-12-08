@@ -652,13 +652,13 @@ typedef struct {
     BYTE	type;
     CARD8	pad;
     CARD16	sequenceNumber B16;
-    CARD32	length B32;
     RROutput	output B32;
     CARD32	pad1 B32;
     CARD32	pad2 B32;
     CARD32	pad3 B32;
     CARD32	pad4 B32;
     CARD32	pad5 B32;
+    CARD32	pad6 B32;
 } xRRGetOutputPrimaryReply;
 #define sz_xRRGetOutputPrimaryReply	32
 
